@@ -1,3 +1,4 @@
+import { topPostSchema } from '../lib/schema';
 import { getComments, getPostById } from '../services/axios';
 import { Comment } from '../types/comment';
 import { Middleware } from '../types/koa';
@@ -40,16 +41,11 @@ const populatePost = (posts: Comment[][]) => {
 };
 
 export const topPostHandler: Middleware = async (ctx) => {
-  const { limit = 10 } = ctx.query;
-  const top = Number(limit);
-
-  if (isNaN(top)) {
-    return ctx.throw(401, 'Query string limit is not a number');
-  }
+  const { limit } = topPostSchema.validateSync(ctx.query);
 
   const comments = await getComments();
   const posts = groupByPost(comments);
-  const topPost = await populatePost(posts.slice(0, top));
+  const topPost = await populatePost(posts.slice(0, limit));
 
   ctx.body = topPost;
 };

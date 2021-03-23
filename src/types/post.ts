@@ -11,3 +11,7 @@ export interface TopPost {
   postBody: string;
   totalNumberOfComments: number;
 }
+
+export interface TopPostQuery {
+  limit: number;
+}
