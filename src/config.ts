@@ -16,7 +16,7 @@ const environment = process.env.ENVIRONMENT as Environment;
 const configs: Record<Environment, () => Omit<Config, 'environment'>> = {
   local: () => ({
     logLevel: 'debug',
-    name: 'backend',
+    name: 'practice-backend',
 
     port: Number(process.env.PORT || '3000')
   }),
