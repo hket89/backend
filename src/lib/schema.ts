@@ -1,6 +1,7 @@
 import * as yup from 'yup';
-import { Comment } from 'src/types/comment';
-import { TopPostQuery } from 'src/types/post';
+
+import { Comment } from '../types/comment';
+import { TopPostQuery } from '../types/post';
 
 export const filterCommentSchema: yup.SchemaOf<Comment> = yup.object({
   postId: yup.number().default(0),

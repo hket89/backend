@@ -1,6 +1,6 @@
 import Router from '@koa/router';
-import { filterCommentsHandler } from './filterComments';
 
+import { filterCommentsHandler } from './filterComments';
 import { healthCheckHandler } from './healthCheck';
 import { topPostHandler } from './topPost';
 
