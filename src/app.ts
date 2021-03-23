@@ -12,3 +12,5 @@ const listener = app.listen(config.port, () => {
     console.debug(`listening on port ${address.port}`);
   }
 });
+
+export default listener;
