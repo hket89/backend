@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^2.0.1",
     "@types/jest": "^26.0.21",
     "@types/koa": "^2.13.1",
     "@types/koa__router": "^8.0.4",

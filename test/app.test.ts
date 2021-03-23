@@ -1,5 +1,6 @@
-import app from '../src/app';
 import supertest from 'supertest';
+
+import app from '../src/app';
 
 describe('test api endpoint', () => {
   const request = supertest(app);
