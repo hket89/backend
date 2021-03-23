@@ -16,9 +16,9 @@ const environment = process.env.ENVIRONMENT as Environment;
 const configs: Record<Environment, () => Omit<Config, 'environment'>> = {
   local: () => ({
     logLevel: 'debug',
-    name: 'ca-jobsdb-migration-api',
+    name: 'backend',
 
-    port: Number(process.env.PORT || '8080')
+    port: Number(process.env.PORT || '3000')
   }),
 
   test: () => ({
