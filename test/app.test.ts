@@ -1,5 +1,6 @@
-import app from '../src/app';
 import request from 'supertest';
+
+import app from '../src/app';
 
 describe('GET / - a simple api endpoint', () => {
   afterAll(() => {

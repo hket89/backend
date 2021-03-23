@@ -1,6 +1,6 @@
-import { router } from './routes';
-import { createApp } from './lib/server';
 import { config } from './config';
+import { createApp } from './lib/server';
+import { router } from './routes';
 
 const app = createApp(router.allowedMethods(), router.routes());
 
