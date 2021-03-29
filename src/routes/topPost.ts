@@ -30,10 +30,10 @@ const populatePost = (posts: Comment[][]) => {
     const post = await getPostById(first.postId);
 
     return {
-      postId: first.postId,
-      postTitle: post.title,
-      postBody: post.body,
-      totalNumberOfComments: x.length
+      post_id: first.postId,
+      post_title: post.title,
+      post_body: post.body,
+      total_number_of_comments: x.length
     } as TopPost;
   });
 

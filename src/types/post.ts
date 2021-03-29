@@ -6,10 +6,10 @@ export interface Post {
 }
 
 export interface TopPost {
-  postId: number;
-  postTitle: string;
-  postBody: string;
-  totalNumberOfComments: number;
+  post_id: number;
+  post_title: string;
+  post_body: string;
+  total_number_of_comments: number;
 }
 
 export interface TopPostQuery {
